@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  id String @id @default( uuid())
+
+  number String @unique
+  installation String @unique
+  name String
+
+  invoices Invoice[]
+}
+
+model Invoice {
+  id String @id @default( uuid())
+
+  clientId String
+  referenceMonth DateTime
+  electricityKwh Int
+  electricityValue Float
+  energySCEEKwh Int
+  energySCEEValue Float
+  energyGDIKwh Int
+  energyGDIValue Float
+  contribution Float
+  total Float
+  maturity String
+
+  client Client @relation( fields: [clientId], references: [id], onDelete: Cascade, onUpdate: Cascade )
+}

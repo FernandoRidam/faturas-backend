@@ -1,0 +1,26 @@
+{
+  "E000": {
+    "status": 500,
+    "message": "Erro no servidor"
+  },
+  "E001": {
+    "status": 404,
+    "message": "Arquivo não encontrado"
+  },
+  "E002": {
+    "status": 500,
+    "message": "Falha ao salvar arquivos"
+  },
+  "E003": {
+    "status": 400,
+    "message": "Extensão inválida"
+  },
+  "E004": {
+    "status": 404,
+    "message": "Cliente não encontrado"
+  },
+  "E005": {
+    "status": 404,
+    "message": "Fatura não encontrada"
+  }
+}

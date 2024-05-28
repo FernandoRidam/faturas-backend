@@ -1,2 +1,8 @@
 node_modules
 yarn.lock
+.env
+build
+tmp/*
+!tmp/.gitkeep
+uploads/*
+!uploads/.gitkeep
